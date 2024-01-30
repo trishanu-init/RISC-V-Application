@@ -1,9 +1,13 @@
 name: Check List Input
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      list:
+        description: 'Enter elements of a list separated by space :'
+        required: true
+        default: '1 2 3 4 5 6 7 8 90 89'
+        type: string
 
 jobs:
   process_list:
@@ -29,4 +33,4 @@ jobs:
     - name: Run pytest with default input list
       run: pytest -s --verbose
       env:
-        INPUT_STRING: "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20"
+        INPUT_STRING: "${{ github.event.inputs.list }}"
