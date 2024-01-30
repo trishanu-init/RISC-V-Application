@@ -37,3 +37,6 @@ jobs:
     - name: Test with pytest
       run: |
         pytest -s --verbose
+    - name: Test with list data as input
+      run: |
+        1 2 3 4 5 6 7 8 9 0
