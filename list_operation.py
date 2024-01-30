@@ -16,9 +16,9 @@ def process_user_list(input):
             print("New  list :",new_list)
 
     except InvalidListSize:
-     print("Error: List size is not a multiple of 10")
+     print("List size is not a multiple of 10")
     except ValueError:
         print("The input was not a valid integer.")
      
-input_string = input('Enter elements of a list separated by space :')
+input_string = input('Enter elements of a list separated by space :\n')
 process_user_list(input_string)
