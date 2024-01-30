@@ -22,17 +22,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
 
-    - name: Install pytest
-      run: |
-        pip install pytest
-
-    - name: Run pytest
-      run: pytest -s --verbose
+    - name: Run script with environment variable input
+      run: python test_list.py
       env:
         INPUT_STRING: "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20"
-
-    # Optionally, you can use a different method to provide input_string from a file or other source
-    # - name: Provide input from a file
-    #   run: echo "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20" > input.txt
-    # - name: Run script with input from a file
-    #   run: python script.py < input.txt
