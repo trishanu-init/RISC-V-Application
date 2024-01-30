@@ -1,4 +1,3 @@
-# script.py
 import os
 import sys
 
@@ -25,7 +24,7 @@ def process_user_list(input):
     except ValueError:
         print("The input was not a valid integer.")
 
-# Get input from command line argument or environment variable
+# Get input from environment variable
 input_string = os.environ.get('INPUT_STRING', '')
 
 # If input is not provided through environment variable, wait for user input
