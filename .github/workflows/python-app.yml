@@ -36,5 +36,5 @@ jobs:
 
     - name: Test with pytest
       run: |
-        pytest -s --verbose 
-        echo "${{github.event.inputs.list}}"
+        python list_operation.py 
+        "${{github.event.inputs.list}}"
