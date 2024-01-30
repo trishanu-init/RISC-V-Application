@@ -1,4 +1,4 @@
-name: Process User List
+name: Check List Input
 
 on:
   push:
@@ -22,7 +22,11 @@ jobs:
       run: |
         python -m pip install --upgrade pip
 
-    - name: Run script with environment variable input
-      run: python test_list.py
+    - name: Install pytest
+      run: |
+        pip install pytest
+
+    - name: Run pytest with default input list
+      run: pytest -s --verbose
       env:
         INPUT_STRING: "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20"
