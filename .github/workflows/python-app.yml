@@ -37,5 +37,4 @@ jobs:
     - name: Test with pytest
       run: |
         pytest -s --verbose 
-    - name: test using manual data
-      run: echo "${{github.event.inputs.list}}"
+        echo "${{github.event.inputs.list}}"
